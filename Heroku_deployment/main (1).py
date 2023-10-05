@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jun 12 11:36:48 2022
-
-@author: siddhardhan
-"""
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -37,7 +30,7 @@ class model_input(BaseModel):
     
 
 # loading the saved model
-diabetes_model = pickle.load(open('diabetes_model.sav','rb'))
+diabetes_model = pickle.load(open('ensemble_model.sav','rb'))
 
 
 @app.post('/diabetes_prediction')
